@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>reveal.js</title>
+
+        <link rel="stylesheet" href="dist/reset.css">
+        <link rel="stylesheet" href="dist/reveal.css">
+        <link rel="stylesheet" href="dist/theme/black.css"> <!-- Using the black theme as base -->
+
+        <!-- Theme used for syntax highlighted code -->
+        <link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+        <!-- Include Raleway font from Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <style>
+            body {
+                font-family: 'Raleway', sans-serif;
+            }
+            .reveal {
+                position: relative;
+                z-index: 1; /* Higher than particles-js */
+            }
+            .reveal .slides section {
+                background-color: transparent; /* Ensure slides are transparent */
+                color: white; /* Ensuring text is visible over particles */
+                text-align: left; /* Left-align the text */
+            }
+            .reveal h1, .reveal h2, .reveal h3, .reveal p, .reveal ul, .reveal li {
+                font-family: 'Raleway', sans-serif;
+            }
+            .reveal h1 {
+                font-size: 28px; /* Increased font size */
+                text-transform: uppercase; /* Uppercase only for first slide */
+            }
+            .reveal h2 {
+                font-size: 26px; /* Increased font size */
+            }
+            .reveal h3 {
+                font-size: 24px; /* Increased font size */
+                margin-top: 5px;
+            }
+            .reveal p {
+                font-size: 20px; /* Increased font size */
+            }
+            .reveal ul {
+                list-style: none;
+                padding-left: 20px;
+            }
+            .reveal li {
+                margin-bottom: 10px;
+                font-size: 20px; /* Increased font size */
+                color: #ffffff; /* Brighter text color for readability */
+            }
+            .centered-heading {
+                text-align: center; /* Center-align the heading */
+            }
+            .video-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px; /* Add space between the videos */
+            }
+            .video-container video {
+                width: 600px; /* Set a fixed width to make the videos larger */
+                height: auto; /* Maintain aspect ratio */
+            }
+            .caption {
+                text-align: center;
+                font-size: 18px;
+                color: #ffffff; /* Brighter text color for readability */
+            }
+            #particles-js {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 0;
+                background: linear-gradient(135deg, #001f3f, #0074D9, #39CCCC);
+            }
+            .image-container {
+                display: flex;
+                justify-content: flex-end; /* Align image to the right */
+                margin-top: -50px; /* Adjust margin to move image up */
+            }
+            .image-container img {
+                width: 300px; /* Adjust image size as needed */
+                height: auto;
+                margin-left: 20px; /* Add margin to left of image to separate it from text */
+            }
+            .top-right-container {
+                position: absolute;
+                top: 0;
+                right: 20px;
+                text-align: center;
+                transform: translateY(-40%); /* Move the image much higher */
+            }
+            .top-right-container img {
+                width: 300px; /* Adjust image size as needed */
+                height: auto;
+            }
+            .top-right-container .caption {
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="particles-js"></div>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h1>Comparative Latent Space Analysis between Artificial and Biological Neural Network Predictive Coders</h1>
+                    <h3>SURF Project by Sam Fatehmanesh</h3>
+                    <h3>Advised by James Gornet</h3>
+                </section>
+                <section>
+                    <h2>Is predictive coding performed similarly across biological and artificial neural networks?</h2>
+                </section>
+                <section>
+                    <h1>Research Plan Overview</h1>
+                    <ul>
+                        <li>Gathering Latent Representations with Malmo Enviroment
+                            <ul>
+                                <li>Completed for ANN</li>
+                                <li>Requires I/O interface with Neuron Culture</li>
+                            </ul>
+                        </li>
+                        <li>Comparative Analysis of Latents
+                            <ul>
+                                <li>Linear transform between latent spaces</li>
+                                <li>Feature identifications between latents and objective</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>ANN Predictive Coder</h1>
+                    <ul>
+                        <li>Architecture
+                            <ul>
+                                <li>Encoder CNN</li>
+                                <li>Two Mamba State Space Model</li>
+                                <li>Decoder CNN</li>
+                            </ul>
+                        </li>
+                        <li> Usage
+                            <ul>
+                                <li>Takes as input past 10 observation action pairs and next action</li>
+                                <li>Predicts next observation</li>
+                            </ul>
+                        </li>
+                        <li> Possible Improvements
+                            <ul>
+                                <li>Switch to a simpler environment</li>
+                                <li>Utilize a latent-only predictive coder (Grill)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h1 class="centered-heading">ANN Predictive Coding Example</h1>
+                    <div class="video-container">
+                        <div>
+                            <video controls>
+                                <source src="vid1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="caption">True Observations</div>
+                        </div>
+                        <div>
+                            <video controls>
+                                <source src="vid2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="caption">Predicted Observations</div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h1>Neuron Culture Embodiment Plan Overview</h1>
+                    <ul>
+                        <li> Requirements
+                            <ul>
+                                <li>Both optical spike input and output</li>
+                                <li>High interface bandwidth ~ 100,000 bits/s</li>
+                                <li>High neuron count ~ 100,000 neurons</li>
+                            </ul>
+                        </li>
+                        <li> Culture Development
+                            <ul>
+                                <li>Optogenetic rat cortical neuron line</li>
+                                <li>Utilizing genetically encoded opsins and biosensors, eg. GCaMP, </li>
+                            </ul>
+                        </li>
+                        <li> Optical Interface
+                            <ul>
+                                <li>CMOS sensor for neuron spike output (Guo)</li>
+                                <li>microOLED display for neuron spike input</li>
+                            </ul>
+                        </li>
+                        <li> Virtual Enviroment
+                            <ul>
+                                <li>Malmo Minecraft Enviroment</li>
+                                <li>Neuron Culture training performed with periodic signal rewards and random signal punishments (Kagan)</li>
+                                <li>Improving predictions rewarded</li>
+                                <li>Worsening predictions punished</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Optical Neural Interface (ONI)</h1>
+                    <ul>
+                        <li> ONI v0
+                            <ul>
+                                <li>First version of interface will be read only</li>
+                                <li>Sony OV2311 CMOS sensor for neural output</li>            
+                                <li>ADD PICTURE OF CAD</li>                
+                            </ul>
+                        </li>
+                        <li> Final Interface Hardware Rough Specs
+                            <ul>
+                                <li>Sony OV2311 CMOS sensor for neural output</li>
+                                <li>Sony OLED ECX337AF display for neural input</li>
+                                <li>Convex lens projects neural optogenetic emissions and projects display light onto neurons</li>
+                                <li>Beam splitting prism enables sensor and display to work on same neuron area</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="top-right-container">
+                        <img src="cad.png" alt="CAD Image">
+                        <div class="caption">ONI v0 CAD</div>
+                    </div>
+                </section>
+                <section>
+                    <h1>References</h1>
+                    <ul>
+                        <li>
+                            <ul>
+                                <li>Guo, C., Blair, G. J., Sehgal, M., Sangiuliano Jimka, F. N., Bellafard, A., Silva, A. J., ... & Aharoni, D. (2023). Miniscope-LFOV: A large-field-of-view, single-cell-resolution, miniature microscope for wired and wire-free imaging of neural dynamics in freely behaving animals. Science advances, 9(16), eadg3918.</li>        
+                                <li>Kagan, B. J., Kitchen, A. C., Tran, N. T., Habibollahi, F., Khajehnejad, M., Parker, B. J., ... & Friston, K. J. (2022). In vitro neurons learn and exhibit sentience when embodied in a simulated game-world. Neuron, 110(23), 3952-3969.</li>
+                                <li>Grill, J. B., Strub, F., Altché, F., Tallec, C., Richemond, P., Buchatskaya, E., ... & Valko, M. (2020). Bootstrap your own latent-a new approach to self-supervised learning. Advances in neural information processing systems, 33, 21271-21284.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <script src="dist/reveal.js"></script>
+        <script src="plugin/notes/notes.js"></script>
+        <script src="plugin/markdown/markdown.js"></script>
+        <script src="plugin/highlight/highlight.js"></script>
+        <script>
+            Reveal.initialize({
+                hash: true,
+                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+            });
+        </script>
+        <script>
+            particlesJS("particles-js", {
+                particles: {
+                    number: { value: 80, density: { enable: true, value_area: 800 } },
+                    color: { value: "#ffffff" },
+                    shape: {
+                        type: "circle",
+                        stroke: { width: 0, color: "#000000" },
+                        polygon: { nb_sides: 5 },
+                        image: { src: "img/github.svg", width: 100, height: 100 }
+                    },
+                    opacity: {
+                        value: 0.5,
+                        random: false,
+                        anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false }
+                    },
+                    size: {
+                        value: 3,
+                        random: true,
+                        anim: { enable: false, speed: 40, size_min: 0.1, sync: false }
+                    },
+                    line_linked: {
+                        enable: true,
+                        distance: 150,
+                        color: "#ffffff",
+                        opacity: 0.4,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: 6,
+                        direction: "none",
+                        random: false,
+                        straight: false,
+                        out_mode: "out",
+                        bounce: false,
+                        attract: { enable: false, rotateX: 600, rotateY: 1200 }
+                    }
+                },
+                interactivity: {
+                    detect_on: "canvas",
+                    events: {
+                        onhover: { enable: true, mode: "repulse" },
+                        onclick: { enable: true, mode: "push" },
+                        resize: true
+                    },
+                    modes: {
+                        grab: { distance: 400, line_linked: { opacity: 1 } },
+                        bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
+                        repulse: { distance: 200, duration: 0.4 },
+                        push: { particles_nb: 4 },
+                        remove: { particles_nb: 2 }
+                    }
+                },
+                retina_detect: true
+            });
+        </script>
+    </body>
+</html>
