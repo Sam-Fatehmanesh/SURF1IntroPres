@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <title>reveal.js</title>
+        <title>SURF Project Introduction Presentation</title>
 
         <link rel="stylesheet" href="dist/reset.css">
         <link rel="stylesheet" href="dist/reveal.css">
@@ -107,6 +107,21 @@
             .top-right-container .caption {
                 margin-top: 10px;
             }
+            .bottom-right-container {
+                position: absolute;
+                top: 0;
+                right: 20px;
+                text-align: center;
+                transform: translateY(40%); /* Move the image much higher */
+            }
+            
+            .bottom-right-container img {
+                width: 300px; /* Adjust image size as needed */
+                height: auto;
+            }
+            .bottom-right-container .caption {
+                margin-top: 10px;
+            }
         </style>
     </head>
     <body>
@@ -117,17 +132,42 @@
                     <h1>Comparative Latent Space Analysis between Artificial and Biological Neural Network Predictive Coders</h1>
                     <h3>SURF Project by Sam Fatehmanesh</h3>
                     <h3>Advised by James Gornet</h3>
+                    <h3>Thompson Laboratory</h3>
+                    <h3>Caltech</h3>
+                </section>
+                <section>
+                    How and why does prediction work?
+                </section>
+                <section>
+                    <h1>Prediction is everywhere</h1>
+                    <div class="top-right-container">
+                        <img src="wolf.jpg" alt="wolf">
+                    </div>
+                    <div class="bottom-right-container">
+                        <img src="bee.webp" alt="bee">
+                    </div>
                 </section>
                 <section>
                     <h2>Is predictive coding performed similarly across biological and artificial neural networks?</h2>
                 </section>
                 <section>
+                    <h1>Understanding prediction enables better predictions</h1>
+                </section>
+                <section>
                     <h1>Research Plan Overview</h1>
                     <ul>
-                        <li>Gathering Latent Representations with Malmo Enviroment
+                        <li>Building the predictors
                             <ul>
-                                <li>Completed for ANN</li>
-                                <li>Requires I/O interface with Neuron Culture</li>
+                                <li>Optical Neuron Culture</li>
+                                <li>Artifical Neural Network (ANN)</li>
+                            </ul>
+                        </li>
+                        <li> Intermediate prediction representation extraction
+                            <ul>
+                                <li>The intermediate representations/latents of the predictors may hint at how prediction is being performed</li>
+                                <li>ANN intermediate latents extracted from sequential model</li>
+                                <li>In vitro neuron culture latents extracted with calcium imaging</li>
+                                <li>In vivo mouse visual cortex latents provided by Allen Brain Observatory</li>
                             </ul>
                         </li>
                         <li>Comparative Analysis of Latents
@@ -144,14 +184,17 @@
                         <li>Architecture
                             <ul>
                                 <li>Encoder CNN</li>
-                                <li>Two Mamba State Space Model</li>
+                                <li>Sequential predictor</li>
+                                <ul>
+                                    <li>Mamba</li>
+                                    <li>Transformer</li>
+                                </ul>
                                 <li>Decoder CNN</li>
                             </ul>
                         </li>
                         <li> Usage
                             <ul>
-                                <li>Takes as input past 10 observation action pairs and next action</li>
-                                <li>Predicts next observation</li>
+                                <li>Takes as input past observations and predicts next observations</li>
                             </ul>
                         </li>
                         <li> Possible Improvements
@@ -193,8 +236,10 @@
                         </li>
                         <li> Culture Development
                             <ul>
-                                <li>Optogenetic rat cortical neuron line</li>
+                                <li>Optogenetic rat line</li>
                                 <li>Utilizing genetically encoded opsins and biosensors, eg. GCaMP, ChRger2</li>
+                                <li>Optogenetics allows for signal input and output from neurons in rat cortex neurons</li>
+                                <li>Rat brain neurons extracted and cultured</li>
                             </ul>
                         </li>
                         <li> Optical Interface
@@ -241,6 +286,7 @@
                     <ul>
                         <li>
                             <ul>
+                                <li>Gornet, J. A., & Thomson, M. (2023). Automated construction of cognitive maps with predictive coding. bioRxiv, 2023-09.</li>
                                 <li>Guo, C., Blair, G. J., Sehgal, M., Sangiuliano Jimka, F. N., Bellafard, A., Silva, A. J., ... & Aharoni, D. (2023). Miniscope-LFOV: A large-field-of-view, single-cell-resolution, miniature microscope for wired and wire-free imaging of neural dynamics in freely behaving animals. Science advances, 9(16), eadg3918.</li>        
                                 <li>Kagan, B. J., Kitchen, A. C., Tran, N. T., Habibollahi, F., Khajehnejad, M., Parker, B. J., ... & Friston, K. J. (2022). In vitro neurons learn and exhibit sentience when embodied in a simulated game-world. Neuron, 110(23), 3952-3969.</li>
                                 <li>Grill, J. B., Strub, F., Altché, F., Tallec, C., Richemond, P., Buchatskaya, E., ... & Valko, M. (2020). Bootstrap your own latent-a new approach to self-supervised learning. Advances in neural information processing systems, 33, 21271-21284.</li>
