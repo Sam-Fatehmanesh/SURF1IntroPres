@@ -129,14 +129,23 @@
         <div class="reveal">
             <div class="slides">
                 <section>
-                    <h1>Comparative Latent Space Analysis between Artificial and Biological Neural Network Predictive Coders</h1>
+                    <h1>Understanding intelligent predictive systems through a comparative analysis of latent spaces</h1>
                     <h3>SURF Project by Sam Fatehmanesh</h3>
-                    <h3>Advised by James Gornet</h3>
-                    <h3>Thompson Laboratory</h3>
+                    <h3>Advised by James Gornet and Matt Thomson</h3>
+                    <h3>Thomson Laboratory</h3>
                     <h3>Caltech</h3>
                 </section>
                 <section>
-                    How and why does prediction work?
+                    <h2>Presentation Outline</h2>
+                    <ul>
+                        <li>Research Question and Background</li>
+                        <li>Research Overview</li>
+                        <li>Future Research</li>
+                        <li>Acknoledgements and References</li>
+                    </ul>
+                </section>
+                <section>
+                    What is prediction?
                 </section>
                 <section>
                     <h1>Prediction is everywhere</h1>
@@ -148,21 +157,30 @@
                     </div>
                 </section>
                 <section>
-                    <h2>Is predictive coding performed similarly across biological and artificial neural networks?</h2>
+                    <h1>The hardware of prediction</h1>
+                    <div class="top-right-container">
+                        <img src="cortex.jpg" alt="cortex">
+                    </div>
+
+
+                </section>
+                <section>
+                    <h2>Is prediction performed similarly across biological and artificial systems?</h2>
                 </section>
                 <section>
                     <h1>Understanding prediction enables better predictions</h1>
                 </section>
                 <section>
-                    <h1>Research Plan Overview</h1>
+                    <h1>Research Overview</h1>
                     <ul>
-                        <li>Building the predictors
+                        <li>Predictor Systems
                             <ul>
-                                <li>Optical Neuron Culture</li>
-                                <li>Artifical Neural Network (ANN)</li>
+                                <li>In Vitro Optically  Interfaced  Neuron  Culture (In Progress)</li>
+                                <li>In Vivo mouse visual cortex (Provided by Allen Brain Observatory)</li>
+                                <li>In Silico Artifical Neural Network (ANN) predictor (Completed)</li> 
                             </ul>
                         </li>
-                        <li> Intermediate prediction representation extraction
+                        <li> Intermediate prediction representations
                             <ul>
                                 <li>The intermediate representations/latents of the predictors may hint at how prediction is being performed</li>
                                 <li>ANN intermediate latents extracted from sequential model</li>
@@ -173,12 +191,12 @@
                         <li>Comparative Analysis of Latents
                             <ul>
                                 <li>Linear transform between latent spaces</li>
-                                <li>Feature identifications between latents and objective</li>
+                                <li>Feature identifications between latents and objective via non linear transforms</li>
                             </ul>
                         </li>
                     </ul>
                 </section>
-                <section>
+                <!-- <section>
                     <h1>ANN Predictive Coder</h1>
                     <ul>
                         <li>Architecture
@@ -204,9 +222,9 @@
                             </ul>
                         </li>
                     </ul>
-                </section>
+                </section> -->
                 <section>
-                    <h1 class="centered-heading">ANN Predictive Coding Example</h1>
+                    <h1 class="centered-heading">Artificial Prediction Example</h1>
                     <div class="video-container">
                         <div>
                             <video controls>
@@ -225,13 +243,13 @@
                     </div>
                 </section>
                 <section>
-                    <h1>Neuron Culture Embodiment Plan Overview</h1>
+                    <h1>Embodied Neuron Culture Overview</h1>
                     <ul>
                         <li> Requirements
                             <ul>
-                                <li>Both optical spike input and output</li>
-                                <li>High interface bandwidth ~ 100,000 bits/s</li>
-                                <li>High neuron count ~ 100,000 neurons</li>
+                                <li>Abritary read write access</li>
+                                <li>Long Term Culture Survival</li>
+                                <li>Plasticity and Learning</li>
                             </ul>
                         </li>
                         <li> Culture Development
@@ -250,7 +268,6 @@
                         </li>
                         <li> Virtual Enviroment
                             <ul>
-                                <li>Malmo Minecraft Enviroment</li>
                                 <li>Neuron Culture training performed with periodic signal rewards and random signal punishments (Kagan)</li>
                                 <li>Improving predictions rewarded</li>
                                 <li>Worsening predictions punished</li>
@@ -259,20 +276,46 @@
                     </ul>
                 </section>
                 <section>
-                    <h1>Optical Neural Interface (ONI)</h1>
+                    <h1>Neural Culture Interaction System</h1>
                     <ul>
-                        <li> ONI v0
-                            <ul>
-                                <li>First version of interface will be read only</li>
-                                <li>Sony OV2311 CMOS sensor for neural output</li>            
+                        <li>Requirements
+                            <ul> 
+                                <li> Prediction of Neural Culture Activity </li>
+                                <li> Abritarary Control of Neural Culture </li>
                             </ul>
                         </li>
-                        <li> Final Interface Hardware Rough Specs
+                        <li> Methods used
+                            <ul> 
+                                <li> Prediction achivhed via convolutional neural networks and Mamba sequential predictor </li>
+                                <li> Control achieved to be achived via soft actor critic reinforcement learning algorithm </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="video-container">
+                        <div>
+                            <video controls>
+                                <source src="true_sim.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="caption">True Observations</div>
+                        </div>
+                        <div>
+                            <video controls>
+                                <source src="pred_sim.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="caption">Predicted Observations</div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h1>Optical Neural Interface (ONI) v0</h1>
+                    <ul>
+                        <li> Interface Hardware Rough Specs
                             <ul>
-                                <li>Sony OV2311 CMOS sensor for neural output</li>
-                                <li>Sony OLED ECX337AF display for neural input</li>
-                                <li>Convex lens projects neural optogenetic emissions and projects display light onto neurons</li>
-                                <li>Beam splitting prism enables sensor and display to work on same neuron area</li>
+                                <li>Sony OV2311 CMOS sensor for neural output recording</li>
+                                <li>Sony OLED ECX337AF display for neural input stimulation</li>
+                                <li>Dichroic mirror enables simultaneous read write</li>
                             </ul>
                         </li>
                     </ul>
@@ -280,6 +323,15 @@
                         <img src="cad.png" alt="CAD Image">
                         <div class="caption">ONI v0 CAD</div>
                     </div>
+                </section>
+                <section>
+                    <h1>Acknoledgements</h1>
+                    <ul>
+                        <li>James Gornet</li>
+                        <li>Matt Thomson</li>
+                        <li>Daniel Wagenaar</li>
+                        <li>Caltech SFP Office</li>
+                    </ul>
                 </section>
                 <section>
                     <h1>References</h1>
